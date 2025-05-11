@@ -222,6 +222,8 @@ const countries = [
     "Zimbabwe"
 ];
 
+const displayText = document.getElementById('count')
+
 function displayCountries(countries) {
     const container = document.getElementById('countryList'); //gets id and assigns to container
     container.innerHTML = '';
@@ -239,9 +241,12 @@ function searchCountries() {
     const filtered = countries.filter(function (country) {
         return country.toLowerCase().includes(input);
     });
+    displayText.innerHTML = `${filtered.length} countries has ${input}`;
+    displayText.style.display = "block";
     displayCountries(filtered);
 }
 
-document.getElementById('searchBtn').addEventListener('click', searchCountries);
+// document.getElementById('searchBtn').addEventListener('click', searchCountries);
+document.getElementById('searchInput').addEventListener('input', searchCountries);
 
 displayCountries(countries);
