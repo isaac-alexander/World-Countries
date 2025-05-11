@@ -52,3 +52,10 @@ button:hover {
     padding: 10px 20px;
     border-radius: 8px;
 }
+
+#id {
+    display: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+}
